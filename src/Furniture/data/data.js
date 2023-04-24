@@ -3,6 +3,7 @@ export var furniure=[
     {
         id:1,
         name:'Garfield Ottoman',
+        rating:["4.5","45","37 People are Viewing this Product Right Now"],
         rate:["-80%","599","2995","Inclusive of all taxes"],
         image:require('../image/addproduct/9o9eoir3-500x500.jpg'),
         allImage:[],

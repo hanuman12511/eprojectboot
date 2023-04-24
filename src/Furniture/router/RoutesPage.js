@@ -10,7 +10,7 @@ function RoutesPage() {
         <>
           <Container fluid className=''>
             <Container className=''>
-                <Row>
+                <Row className='fixed-top'>
                     <Col>
                      {['md'].map((expand) => (
                                 <Navbar key={expand} bg="light" expand={expand} className="">
