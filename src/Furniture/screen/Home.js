@@ -104,7 +104,7 @@ function  Home() {
                         { furniure.map(function(d){
                             return(
                                 
-                                  <Card style={{  }} className='g-4 m-2'>
+                                  <Card style={{  }} className='g-4 m-2 cursor-pointer' onClick={()=>{navigate('../productdetails',{state:{product:d}})}}>
                                   <Card.Img variant="top" src={d.image} />
                                   <Card.Body>
                                     <Card.Title>{d.name}</Card.Title>
