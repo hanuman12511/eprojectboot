@@ -9,3 +9,32 @@ height: 100%;
     align-items: center;
     
 }
+.subscribe{
+align-items: center;
+ justify-content: center;
+}
+.form-control{
+    border-radius: 0px;   
+   
+} 
+.sub-btn{
+    background-color: rgb(230, 4, 49);
+}
+
+.sub-btn:hover{
+    background-color: rgb(173, 4, 38);
+}
+.form-control:focus {
+    outline: 0px none #fff !important;
+    box-shadow: none;
+    border: 0px;
+}
+.bg-color-lightblue{
+    background-color: #ADD8E6;
+}
+.bg-color-light{
+    background-color: #fff;
+}
+.mt-60{
+    margin-top: 60px;
+}

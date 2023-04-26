@@ -36,8 +36,8 @@ function  Home() {
         <>
        <Container fluid className=''>
             <Container className=''>
-                <Row>
-                    <Col>
+                <Row className='mt-20'>
+                    <Col  className='mt-60'>
                     <Carousel1>
                         <Carousel1.Item interval={1000}>
                             <img
