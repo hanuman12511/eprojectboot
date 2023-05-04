@@ -5,9 +5,17 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {furniure } from '../data/data';
 import {useNavigate} from 'react-router-dom'
+import { useEffect,useState } from 'react';
 function  Home() {
     const navigate =useNavigate();
 
+const [user,setUser] = useState(null)
+    useEffect(()=>{
+
+      function show(){
+        setUser(localStorage.getItem('user'))
+      }
+    },[user])
     const responsive = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },

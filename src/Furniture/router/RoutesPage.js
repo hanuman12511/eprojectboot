@@ -8,8 +8,35 @@ import ProductDetails from '../screen/ProductDetails';
 import DemoBoot from '../screen/DemoBoot';
 import { FaSearch } from "react-icons/fa";
 import { Player } from '@lottiefiles/react-lottie-player';
-
+import Login from '../screen/Login';
+import {useState,useEffect} from 'react'
+import {useNavigate, } from 'react-router-dom'
 function RoutesPage() {
+let nav= useNavigate()
+
+    const[user,setUser] =useState(null)
+    useEffect(()=>{
+        function show(){
+            console.log("user router useeffect");
+                setUser(localStorage.getItem('user'))
+        }
+        show()
+    },[user])
+    
+
+    function loginuser(){
+
+        alert("login user")
+        nav('/login')
+    }
+    function logout(){
+
+        alert("login not     user")
+        console.log("logout");
+        localStorage.clear();
+        window.location.reload();
+        nav("/")
+    }
     return (
         <>
           <Container fluid className='m-5'>
@@ -43,6 +70,8 @@ function RoutesPage() {
         background=''
         style={{ height: '50px', width: '50px' }}
       />
+      {user===null?
+        <div  onClick={loginuser}>
        <Player
         src={require('../image/125886-login-bounce.json')}
         className="player"
@@ -51,7 +80,23 @@ function RoutesPage() {
         speed={1}
         background=''
         style={{ height: '40px', width: '40px' }}
+       
+      /></div>:
+      <div  onClick={logout}>
+<Player
+        src={require('../image/90919-logout.json')}
+        className="player"
+        loop
+        autoplay
+        speed={1}
+        background=''
+        style={{ height: '40px', width: '40px' }}
+        
+       
       />
+      </div>
+      }
+
                     </Col>
                 </Row>
                     <Col className='bg-color-lightblue'>
@@ -122,6 +167,7 @@ function RoutesPage() {
             <Route  path="/details" element={<Details />}/>
             <Route  path="/productdetails" element={<ProductDetails />}/>
             <Route  path="/link" element={<DemoBoot />}/>
+            <Route  path="/login" element={<Login />}/>
         </Routes>
         <Container fluid className=''>
             <Container>
