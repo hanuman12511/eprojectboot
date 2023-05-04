@@ -20,8 +20,9 @@ export default function Login(){
         if(email==="hanu@gmail.com"){
             localStorage.setItem('user',email);
             setUser(localStorage.getItem('user'))
-            window.location.reload();
+           
             nav("/")
+            window.location.reload();
         
         }
         else{
